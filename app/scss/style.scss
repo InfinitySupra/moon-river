@@ -1,0 +1,25 @@
+/* Bootstrap from bower */
+
+// Configuration
+@import "bower_components/bootstrap/scss/functions";
+@import "bower_components/bootstrap/scss/variables";
+@import "bower_components/bootstrap/scss/mixins";
+@import "bower_components/bootstrap/scss/utilities";
+
+// Layout & components
+@import "bower_components/bootstrap/scss/root";
+@import "bower_components/bootstrap/scss/reboot";
+@import "bower_components/bootstrap/scss/bootstrap-grid";
+
+
+/* Native configuration */
+
+// Fonts
+@import "modules/fonts";
+
+// Modules
+@import "modules/variables", 
+        "modules/global", 
+        "modules/header", 
+        "modules/footer";
+

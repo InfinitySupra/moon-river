@@ -1,0 +1,171 @@
+.page__body {
+    max-width: $max-width-body;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-image: url(../images/jpg/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.nav {
+    justify-content: space-between;
+    align-items: center;
+}   
+.nav-manu {
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 96px;
+}
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 2.08vw;
+}
+
+.nav-items-num {
+    color: $color-light;
+    font-family: $font-futura;
+}
+
+.manu-triger {
+    padding-left: 2.08vw;
+}
+
+.h-banner {
+    margin-top: 32.32vh;
+    height: 170px;
+    gap: 2vw;
+}
+
+.h-banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__title {
+        font-family: $font-rr;
+        font-weight: 300;
+        @include adaptiv-font(64, 20);
+        line-height: 71px;
+        letter-spacing: 0.03em;
+        color: $color-black;
+        letter-spacing: 0.03em;
+    }
+    &__link {
+        font-family: $font-segoe;
+        font-style: italic;
+        font-weight: 300;
+        @include adaptiv-font(18, 16);
+        line-height: 24px;
+        color: $color-black;
+        transform: translateX(225px);
+        position: relative;
+    }
+    &__link:hover {
+        color: $color-text-hover;
+    }
+}
+.h-banner-text__link::before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 1px);
+    left: -168px;
+    width: 130px;
+    height: 2px;
+    background-color: $color-black;
+}
+.h-banner-image {
+    width: 322px;
+    flex-basis: content;
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.header-bottom {
+    margin-top: 27.44vh;
+    height: 86px;
+    justify-content: space-between;
+    align-items: end;
+}
+.lang-wrap {
+    display: inherit;
+    padding: 0;
+    margin: 0;
+    * {
+        font-family: $font-futura;
+        @include adaptiv-font(16, 10);
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-black;
+        transition: all .3s;
+    }
+    .lang__item:hover {
+        color: $color-text-hover;
+    }
+}
+.lang-padding {
+    padding-left: 10px;
+}
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+
+    .label__name {
+      font-family: $font-futura;
+      @include adaptiv-font(16, 10);
+      line-height: 21px;
+      letter-spacing: 0.05em;
+      color: $color-light;
+      text-transform: uppercase;
+    }
+    .label__description {
+      color: $color-font-description;
+      font-weight: 300;
+      @include adaptiv-font(16, 10);
+      line-height: 23px;
+    }
+    .label__cost, 
+    .label__currency {
+      font-weight: 300;
+      @include adaptiv-font(18, 16);
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: $color-gold;
+    }
+}
+
+/*
+    Рассчитать высоту блоков .header-bottom (Calculate the block height): 
+
+    <1!>  Высота заголовка (height title):
+    line-height: 21px;
+
+    <2!>  Высота описания (height description):
+    line-height: 23px;
+
+    <3!>  Высота стоимости (height cost):
+    line-height: 24px;
+
+    gap: 9px * 2;
+
+    
+    
+    Рассичать высоту переклучателя языка (Calculate the language trigger)    
+    <1!> Высота блока с сложенными элементами (The height trigger inner)
+    
+    Рассчитать отступ снизу родительского блока (Calculate the padding bottom for the parent blok)
+    <1!> Нижний отступ пропорционален высоте окна просмотра (Padding bottom proportionally to the height viewport)
+    <1!> 
+    <1!> 
+
+
+*/

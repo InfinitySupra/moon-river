@@ -1,0 +1,36 @@
+//Font
+$font-rr: 'Forum', sans-serif;
+$font-futura: 'Futura', sans-serif;
+$font-segoe: 'SegoeUI', sans-serif;
+
+//Color
+$color-light: #fff;
+$color-font-description: #C2C2C2;
+$color-gold: #EFC58B;
+$color-black:#272727;
+$color-text-hover: #C4C4C4;
+
+//Size
+$max-width: 1920;
+$max-width-body: 1920px !default;
+
+.page__body {
+  font-family: $font-rr;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+// Responsive font
+@mixin adaptiv-font($pc-size, $mob-size) {
+ $add-size: $pc-size - $mob-size;
+ $max-width: $max-width - 320;
+ font-size: calc(#{$mob-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
